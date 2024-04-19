@@ -4,12 +4,28 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  '@multi-repo-actions/demo-package-a':
+    specifier: ^1.0.0
+    version: 1.0.0
+  '@multi-repo-actions/demo-package-b':
+    specifier: ^1.0.0
+    version: 1.0.0
+
 devDependencies:
   prettier:
     specifier: ^3.2.5
     version: 3.2.5
 
 packages:
+
+  /@multi-repo-actions/demo-package-a@1.0.0:
+    resolution: {integrity: sha512-rM3pJTYBvu34vP4EgseUq7rUp2h9InGYFMmwRG/6eDTFWy251y7E7IZysGUsM9MN9C87P2NcczX6nzlrAbtIag==}
+    dev: false
+
+  /@multi-repo-actions/demo-package-b@1.0.0:
+    resolution: {integrity: sha512-LhrTZGxLd+Oz6pNziXr7CR7EUVjo898EmN0ocW5YFn0NBbj94vxqXKuG3/xornSs5mGdxgeOqJOWhMBtR01mZg==}
+    dev: false
 
   /prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}

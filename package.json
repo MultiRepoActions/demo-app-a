@@ -11,5 +11,9 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "@multi-repo-actions/demo-package-a": "^1.0.0",
+    "@multi-repo-actions/demo-package-b": "^1.0.0"
   }
 }
