@@ -1,0 +1,24 @@
+on:
+  repository_dispatch:
+    types:
+      - update-internal-packages
+
+jobs:
+  pre:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show result of get_repos
+        run: echo ${{ steps.get_repos.outputs.result }}
+  build:
+    needs: pre
+    uses: MultiRepoActions/actions/.github/workflows/update_packages.yml@main
+
+    with:
+      package_name: ${{ github.event.client_payload.package_name }}
+      package_version: ${{ github.event.client_payload.package_version }}
+      target_branch: ${{ github.event.client_payload.target_branch }}
+
+    secrets:
+      ACCESS_TOKEN_FOR_PR_AUTOMATION: ${{ secrets.ACCESS_TOKEN_FOR_PR_AUTOMATION }}
+
+    # not sure if this will work, so lets try and show the result
