@@ -11,7 +11,7 @@ jobs:
         run: echo ${{ steps.get_repos.outputs.result }}
   build:
     needs: pre
-    uses: MultiRepoActions/actions/.github/workflows/update_packages.yml@main
+    uses: MultiRepoActions/actions/.github/workflows/create_update_pr.yml@main
 
     with:
       package_name: ${{ github.event.client_payload.package_name }}
