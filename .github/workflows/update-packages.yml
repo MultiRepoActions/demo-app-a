@@ -13,12 +13,4 @@ jobs:
     needs: pre
     uses: MultiRepoActions/actions/.github/workflows/create_update_pr.yml@main
 
-    # with:
-    #   package_name: ${{ github.event.client_payload.package_name }}
-    #   package_version: ${{ github.event.client_payload.package_version }}
-    #   target_branch: ${{ github.event.client_payload.target_branch }}
-
-    secrets:
-      ACCESS_TOKEN_FOR_PR_AUTOMATION: ${{ secrets.ACCESS_TOKEN_FOR_PR_AUTOMATION }}
-
     # not sure if this will work, so lets try and show the result
