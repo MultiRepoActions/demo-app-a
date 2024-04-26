@@ -6,5 +6,6 @@ on:
 jobs:
   build:
     uses: MultiRepoActions/actions/.github/workflows/create_update_pr.yml@main
+    secrets: inherit
 
     # not sure if this will work, so lets try and show the result
