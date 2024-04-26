@@ -4,11 +4,6 @@ on:
       - update-internal-packages
 
 jobs:
-  pre:
-    runs-on: ubuntu-latest
-    steps:
-      - name: show result of get_repos
-        run: echo ${{ steps.get_repos.outputs.result }}
   build:
     uses: MultiRepoActions/actions/.github/workflows/create_update_pr.yml@main
 
